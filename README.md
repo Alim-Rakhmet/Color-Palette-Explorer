@@ -36,13 +36,12 @@ python manage.py runserver
 
 1)Конструирование бд (sqlite, Django ORM)
 
-<img src="https://i.ibb.co.com/0XP7Vvn/1.jpg">
-[image](https://i.ibb.co.com/0XP7Vvn/1.jpg)
+<img src="https://i.postimg.cc/T1rD7DCz/1.jpg">
 
 2)Разработка бэкенда (Python, Django)
 
-https://i.ibb.co.com/8NLh2pS/2.jpg
+<img src="https://i.ibb.co.com/8NLh2pS/2.jpg">
 
 3)Добавление фронтенда (HTML, CSS, Bootstrap)
 
-https://i.ibb.co.com/KrGy17y/3.jpg
+<img src="https://i.ibb.co.com/KrGy17y/3.jpg">
