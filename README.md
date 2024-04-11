@@ -36,7 +36,7 @@ python manage.py runserver
 
 1)Конструирование бд (sqlite, Django ORM)
 
-https://i.ibb.co.com/0XP7Vvn/1.jpg
+<img src="https://i.ibb.co.com/0XP7Vvn/1.jpg"></img>
 
 2)Разработка бэкенда (Python, Django)
 
