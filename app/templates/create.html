@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<body>
+    <div class="container my-5">
+        {% if palitra %}
+        <div class="row rounded-box">
+            <div class="col">
+                <form action="{% url 'create' %}" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="palitra">Название палитры</label>
+                        <input type="text" class="form-control" id="palitra" name="palitra" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger" name="save" value="{{ id }}">Сохранить</button>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-4">
+            {% for i in palitra %}
+            <div class="col-md-3 mb-3">
+                <form action="{% url 'create' %}" method="post">
+                    {% csrf_token %}
+                    <div class="card">
+                        <div class="card-body">
+                            <svg width="200" height="100">
+                                <rect width="200" height="100" fill="{{ i.color }}" />
+                            </svg>
+                        </div>
+                        <div class="card-footer">
+                            <input type="hidden" name="color" value="{{ i.pk }}">
+                            <button type="submit" class="btn btn-danger btn-sm" name="delete" value="{{ id }}">Удалить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="row rounded-box">
+            <div class="col text-center">
+                <h2>Создайте свою первую палитру</h2>
+            </div>
+        </div>
+        {% endif %}
+        <div class="row mt-4 rounded-box">
+            <div class="col">
+                <form action="{% url 'create' %}" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="color">Выберите цвет</label>
+                        <input type="color" class="form-control" id="color" name="name" required onchange="changeButtonColor()">
+                    </div>
+                    <button type="submit" class="btn btn-danger" id="addButton" name="add" value="{{ id }}">Добавить цвет</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function changeButtonColor() {
+        var selectedColor = document.getElementById("color").value;
+        var button = document.getElementById("addButton");
+        button.style.backgroundColor = selectedColor;
+    }
+</script>
+{% endblock %}

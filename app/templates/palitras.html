@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% for i in Palitras %}
+        <div class="card my-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ i.name }}</h5>
+                <div class="row">
+                    {% for j in i.get_colors %}
+                        <div class="col-md-3">
+                            <div class="card mb-2">
+                                <div class="card-body" style="background-color: {{ j.color }};">
+                                    <p class="card-text text-center text-white">{{ j.color }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

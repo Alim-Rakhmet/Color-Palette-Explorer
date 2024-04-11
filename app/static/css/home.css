@@ -1,0 +1,122 @@
+body {
+    background-image: url('wall.jpg'); /* Замените 'your-image.jpg' на путь к вашему изображению */
+    background-size: cover; /* Растягиваем изображение на всю ширину и высоту экрана */
+    background-position: center; /* Центрируем изображение */
+    background-repeat: repeat; /* Запрещаем повторение изображения */
+    color: #4a4a4a;
+
+}
+
+.full-height {
+    height: 90vh;
+}
+.vertical-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rounded-box {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+}
+.rounded-box-hello {
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+}
+.rounded-box-user {
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
+}
+.rounded-box-user a{
+    font-size: 25px;
+}
+.pad {
+    padding-top: 15px;
+}
+.top-red {
+    background-color: red;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 20px;
+    color: #ffffff; 
+    text-align: center; 
+    height: 75px;
+    margin-bottom: 15px;
+}
+.bottom-red {
+    background-color: red; /* Красный фон для нижней части */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: #ffffff; /* Белый текст */
+    margin-top: 25px;
+    padding-bottom: 2px;
+    padding-left: 9px;
+    padding-right: 9px;
+    height: auto; 
+    position: relative; /* Гибкое позиционирование */   
+}
+.bottom-red a {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 150%; /* Перемещение текста на середину по вертикали */
+    left: 50%; /* Перемещение текста на середину по горизонтали */
+    transform: translate(-50%, -50%); /* Коррекция положения текста */
+}
+.btn-primary{
+    background-color: red;
+    border-color:white;
+    color: white;
+    border-radius: 10px;
+}
+.btn-primary:hover {
+    background-color: white; /* Новый цвет кнопки при наведении */
+    border-color: red; /* То же самое, если нужно изменить цвет рамки */
+    color: red;
+}
+.polaroid-card {
+    margin: 20px;
+    position: relative;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.polaroid-image {
+    width: 100%;
+    padding-top: 150%; /* Соотношение сторон 3:4 */
+    background: url('polaroid_frame.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.polaroid-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border-top: 1px solid #ddd;
+}
+
+.colors {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.color-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.polaroid-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

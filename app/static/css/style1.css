@@ -1,0 +1,16 @@
+.rainbow-text span {
+  animation: rainbow 3s infinite;
+}
+
+@keyframes rainbow {
+  0% { color: red; }
+  15% { color: orange; }
+  30% { color: yellow; }
+  45% { color: rgb(0, 255, 0); }
+  60% { color: rgb(0, 76, 255); }
+  75% { color: rgb(149, 0, 255); }
+  90% { color: rgb(255, 0, 255); }
+  100% { color: red; }
+}
+
+

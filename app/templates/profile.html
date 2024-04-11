@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid full-height vertical-center">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="rounded-box-hello">
+                <div class="top-red">
+                    <h2 class="mb-4">Пользователь</h2>
+                </div>
+                <form method="post">
+                    <h1 class="text-center">{{ get_user.username }}</h1>
+                    <div class="bottom-red">
+                        <h6 class="text-center mt-4">Скорее взгляните на его палитры</h6>
+                        <a href="{% url 'palitras' user_id=get_user.pk %}" class="btn btn-primary mt-3">Палитры</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+    <h1>{{get_user.username}}</h1>
+    <a href="{% url 'palitras' user_id=get_user.pk %}">Палитры</a>
