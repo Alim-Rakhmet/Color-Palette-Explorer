@@ -41,7 +41,7 @@ python manage.py runserver
 
 1) Конструирование БД (SQLite, Django ORM)
 
-<img src="https://i.ibb.co.com/98scptP/1.jpg">
+<img src="https://i.postimg.cc/BQBTLj7V/1.jpg">
 
 2) Разработка бэкенда (Python, Django)
 
